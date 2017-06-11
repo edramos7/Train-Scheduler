@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Train_scheduler</title>
+
+  <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  
+</head>
+
+<body>
+
+  <div class="container">
+
+    <br>
+
+    <!-- Jumbotron Title -->
+    <div class="jumbotron" style="background-color:cornflowerblue; color:white;" >
+      <h1 class="text-center">Tequila Express Railraod System</h1>
+      <h3 class="text-center">"Yes!, there is light at the end of the tunnel!"</h3>
+    </div>
+
+  
+    <!-- List of trains and their schedule -->
+    
+
+    <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading" style="background-color: cornflowerblue; color:white;">Current Train Schedule</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+        <th>Train Name</th>
+        <th>Destination</th>
+        <th>Frequency (min)</th>
+        <th>Next Arrival</th>
+        <th>Minutes Away</th>
+    </tr>
+    <tr>
+        <td id="trainDisplay">Trenton Express</td>
+        <td id="destinationDisplay">Trenton</td>
+        <td id="frequencyDisplay">25</td>
+        <td id="nextArrivalDisplay">05:35 PM</td>
+        <td id="minutesAwayDisplay">10</td>
+    </tr>
+
+</table>
+</div>
+
+   <!--adding new trains-->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading" style="background-color: cornflowerblue; color:white;>
+            <h3 class="panel-title">Add train</h3>
+          </div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for="trainInput">Train Name</label>
+                <input class="form-control" id="trainInput" type="text">
+              </div>
+              <div class="form-group">
+                <label for="destinationInput">Destination</label>
+                <input class="form-control" id="destinationInput" type="text">
+              </div>
+              <div class="form-group">
+                <label for="timeInput">First Train Time (HH:mm - Military Time)</label>
+                <input class="form-control" id="timeInput" type="number">
+              </div>
+              <div class="form-group">
+                <label for="frequencyInput">Frequency (min)</label>
+                <input class="form-control" id="frequencyInput" type="number">
+              </div>
+              <button class="btn btn-primary" id="addTrain" type="submit" style="background-color: cornflowerblue; color:white">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <!-- JavaScript -->
+   
+  <script src= "trainlogic.js"></script>
+  
+
+</body>
+
+</html>
